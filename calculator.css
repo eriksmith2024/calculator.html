@@ -1,0 +1,59 @@
+
+body{
+    margin: 0;
+    display: flex;/*  incorporated the flex box making it adjustable to screen size  */
+    justify-content: center;/*  horizintal alignemet in the center   */
+    align-items: center;/* vertical alignment   */
+    height: 100vh;/* should set the document at the center horizontally and vertically    */
+    background-color: hsl(0, 0%, 95%);
+
+}
+
+#calculator{
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 35%, 49%); /*Background behind the buttons*/
+    border-radius: 15px; /* Rounds the edges of the calculator   */
+    max-width: 500px;/* width of calulator   */
+    overflow: hidden;/*  Not quite sure research this  */
+}
+#display{
+    width: 100%;/* width of display where the input of the buttons shows   */
+    padding: 20px;/* slight indent of the text in the display    */
+    font-size: 5rem;/*   size of the display text where user calculations show */
+    text-align: left;/* alligns the text showing user numbers entered to the left on display    */
+    border: rgb(25, 103, 25) solid 10px;/*   border around the display */
+    background-color: hsl(44, 15%, 81%);/*  Display color behind the text of chosen user calculations  */
+    color: black;
+}
+#keys{ /* makes a grid for all the buttons */
+    display: grid; /*Makes the buttons on a grid */
+    grid-template-columns: repeat(4, 1fr); /* makes it 4 columns change the 4 for different columns */
+    gap: 10px;
+    padding: 25px;
+}
+button{ /*This is for all button style features */
+    width: 100px;/* width of the button */
+    height: 100px;/*Height of the button */
+    border-radius: 10px; /*makes it a circle rather than square if you make it say 50px rather than 10px that rounds the edges */
+    border: limegreen solid;/* gives the button key a border or not*/
+    background-color: hsl(161, 15%, 66%);
+    color: rgb(219, 228, 223); /* color of the text*/
+    font-size: 5rem; /* size of the text */
+    font-weight: bold,italic;
+    cursor: pointer; /*Makes the mouse cursor go to a hand */
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);/* created the change to color highligting button as cursor hovers above   */
+}
+button:active{
+    background-color: hsl(0, 0%, 50%);/* makes it flash momentarily when you click button   */
+}
+.operator-btn{
+    background-color: orange;/* takes the operator buttons listed in HTML file and makes them orange   */
+}
+.operator-btn:hover{
+    background-color: hsl(35, 100%, 75%);/*makes the operator class of buttons go lighter when you hover cursor over them    */
+}
+.operator-btn:active{
+    background-color: hsl(35, 100%, 55%);/*  makes the operator buttons flash lighter color orange on click  */
+}
